@@ -89,7 +89,19 @@
                     <a href="{{route('imagen.create')}}">Crear imagen</a>
                 </div>
                 @isset($imagenes)
-                    Hola Mundo
+{{--                    abrimos el bucle de las imagenes--}}
+                    <div class="row">
+                        @forelse($imagenes as $imagen)
+                            <div class="col-md-3">
+                                <h2>{{$imagen->titulo}}</h2>
+{{--                                encapsulamos dentro del metodo ImagenCript la propiedad Id del objeto imagen para encriptarlo y pasarlo al metod get imagen--}}
+                                <img src="{{route('getImagen', ['id' => $imagen->ImagenCript($imagen->id)])}}" alt="">
+                            </div>
+                        @empty
+                        <h2>No hay imagenes porfavor crea una</h2>
+                        @endforelse
+                    </div>
+
                 @endisset
             </div>
         </div>

@@ -117,6 +117,7 @@
       <path value="$PROJECT_DIR$/vendor/hashids/hashids" />
       <path value="$PROJECT_DIR$/vendor/graham-campbell/manager" />
       <path value="$PROJECT_DIR$/vendor/vinkla/hashids" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gSuT4pPsakHtOKFycFnsbHXZNb" />
@@ -137,6 +138,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Imagen\storage\app\public\imagen" />
       <recent name="C:\laragon\www\Imagen\resources\views" />
     </key>
   </component>
@@ -154,7 +156,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598120320221</updated>
-      <workItem from="1598120321651" duration="2755000" />
+      <workItem from="1598120321651" duration="6107000" />
     </task>
     <servers />
   </component>
@@ -162,9 +164,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2330" y="430" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598122043127">
-      <screen x="1920" y="311" width="1360" height="728" />
+    <state x="579" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598126236444">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="579" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.311.1360.728@0.0.1920.1040" timestamp="1598126236444" />
     <state x="2330" y="430" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.311.1360.728@1920.311.1360.728" timestamp="1598122043127" />
   </component>
 </project>

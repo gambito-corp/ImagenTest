@@ -5,17 +5,18 @@ namespace App\Http\Controllers;
 use App\Imagen;
 use Hashids\Hashids;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class ImagenController extends Controller
 {
 
-    public static function hash($id, $decode = null)
+    public static function hash($id)
     {
         $hashids = new Hashids();
-        return is_null($decode)
-            ?  $hashids->encode($id, 0,1,2,3,4,5,6,5,4,3,2,1,0 ,$id)
-            :  $hashids->decode($id)[0];
+        return $hashids->decode($id)[0];
     }
     /**
      * Display a listing of the resource.
@@ -58,12 +59,19 @@ class ImagenController extends Controller
         //instancias el objeto
         $ImagenObjeto = new Imagen();
 
-        // Das el Id a la imagen como nombre
-        $id = Imagen::all()->last()->id+1;
+        // Das el Id a la imagen como nombre y validas que no sea el primero
+        $id = 1;
+        if(!is_null(Imagen::all()->last())){
+            $id = Imagen::all()->last()->id+1;
+        }
         //agregas la extension jpg (o la que desees)
         $imagen_name = $id.'.jpg';
-        //Trtabajamos con el Storage (en este punto previuo a ello suelo usar el paquete intervencion image para tratar la imagen pero eso lo dejo a su gusto)
-        Storage::disk('public')->put('/'.$imagen_name, $imagen);
+        // Ahora trabajamos y guardamos la imagen con intervencion imagen
+        $file = Image::make($imagen)
+            ->resize('400', '400')
+            ->encode('jpg', 90);
+        $file->save(Storage::disk('public')->put('imagen/'.$imagen_name, $file));
+
 
         //seteamos el Objeto
         $ImagenObjeto->titulo = $titulo;
@@ -73,6 +81,33 @@ class ImagenController extends Controller
         $ImagenObjeto->save();
 
         return redirect()->route('index');
+
+        /*
+         * Si Se dan Cuenta el nombre en la tabla no esta encriptado ni tampoco en el archivo,
+         * si nosotros llamaremos directamente al archivo asi en la vista con la funcion Get imagen
+         * con el inspector de elementos nos saldria 1.jpg, 2.jpg 3.jpg ect...
+         * ahora llamaremos en el metodo get imagen al descript y en el modelo al encript para
+         * pasar el id de forma encriptada y desencr5iptarlo en el controlador para que nos devuelva
+         * por JSON el blob encriptado y lo imprima directamente en la vista
+         * */
+    }
+
+    public function getImagen($id)
+    {
+
+        //llamamos al metodo estatico que creeamos arriba y pasamos el id encriptado para desencriptar
+        $id = ImagenController::hash($id);
+//        Buscamos la imagen en la BD
+        $data = Imagen::where('id', $id)->first();
+//        Recuperamos el archivo Storage
+        $file = Storage::disk('public')->get('imagen/'.$data->ruta);
+        //emitimos el codigo de respuesta
+        $code = 200;
+        return new Response($file,$code);
+        /*
+         * Ni que decir tiene que en este controlador podemos emitir las validaciones y
+         * capas de seguridad que deseemos como Auth, isAdmin o la que deseemos
+         * */
     }
 
     /**

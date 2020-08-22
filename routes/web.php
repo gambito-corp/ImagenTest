@@ -1,5 +1,6 @@
 <?php
 
+use App\Imagen;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $imagenes = Imagen::all();
+    return view('welcome', compact('imagenes'));
 })->name('index');
 
 Route::resource('imagen', 'ImagenController');
