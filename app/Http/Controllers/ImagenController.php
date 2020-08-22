@@ -68,7 +68,7 @@ class ImagenController extends Controller
         $imagen_name = $id.'.jpg';
         // Ahora trabajamos y guardamos la imagen con intervencion imagen
         $file = Image::make($imagen)
-            ->resize('400', '400')
+            ->resize('100', '100')
             ->encode('jpg', 90);
         $file->save(Storage::disk('public')->put('imagen/'.$imagen_name, $file));
 

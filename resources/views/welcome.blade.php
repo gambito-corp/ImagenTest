@@ -95,7 +95,7 @@
                             <div class="col-md-3">
                                 <h2>{{$imagen->titulo}}</h2>
 {{--                                encapsulamos dentro del metodo ImagenCript la propiedad Id del objeto imagen para encriptarlo y pasarlo al metod get imagen--}}
-                                <img src="{{route('getImagen', ['id' => $imagen->ImagenCript($imagen->id)])}}" alt="">
+                                <img src="{{route('getImagen', ['id' => $imagen->ImagenCript()])}}" alt="{{$imagen->titulo}}">
                             </div>
                         @empty
                         <h2>No hay imagenes porfavor crea una</h2>
