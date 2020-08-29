@@ -12,23 +12,23 @@ Si la base de datos esta vacia:
     <img src="https://i.imgur.com/0h3uvSt.png">
 </p>
 El bucle manda la respuesta de que no hay imagenes
-[img]https://i.imgur.com/QiQUnHD.png[/img]
+<img src="https://i.imgur.com/QiQUnHD.png">
 Subimos una imagen
-[img]https://i.imgur.com/BV6uGab.png[/img]
+<img src="https://i.imgur.com/BV6uGab.png">
 Y se visualizan en el forelse
-[img]https://i.imgur.com/i8l45EU.png[/img]
+<img src="https://i.imgur.com/i8l45EU.png">
 en la BD se guardaron con un nombre Organico 1.jpg (sabemos que esa imagen pertenece al id 1 de la categoria que determinemos):
-[img]https://i.imgur.com/Y9UmzFV.png[/img]
+<img src="https://i.imgur.com/Y9UmzFV.png">
 en nuestra estructura de direcctorios tambien se crea de forma organica, cuando revisemos nuestros ficheros podemos ver que estan las imagenes sin encriptar
-[img]https://i.imgur.com/9Znogjm.png[/img]
+<img src="https://i.imgur.com/9Znogjm.png">
 
 a la hora de imprimir la vista si aparecen el archivo encriptado, por ende ya no puede ser atacado por un sistema automatizado a menos que conozcan nuestra clave de HashIds
-[img]https://i.imgur.com/35DBnRu.png[/img]
+<img src="https://i.imgur.com/35DBnRu.png">
 si alguien intentara acceder manualmente a la ruta se encontraria con el blob asi que no lo podria descargar
-[img]https://i.imgur.com/bAQjjto.png[/img]
+<img src="https://i.imgur.com/bAQjjto.png">
 si intentara retroceder en la vista de directorios al ser una ruta nos daria un 404
-[img]https://i.imgur.com/pbG42Kn.png[/img]
+<img src="https://i.imgur.com/pbG42Kn.png">
 y al intentar guardar la imagen como solo te dejaria guardar el html por ende no obtendria la imagen
-[img]https://i.imgur.com/74Z6LjZ.png[/img]
+<img src="https://i.imgur.com/74Z6LjZ.png">
 
 Si le hechan ingenio pueden hacer de esto un metodo extraido en el cual les sirva p
