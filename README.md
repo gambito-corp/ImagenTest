@@ -9,8 +9,7 @@
 
 ## Explicacion
 1. Si la base de datos esta vacia:
-    <img src="https://i.imgur.com/0h3uvSt.png">
-</p>
+<img src="https://i.imgur.com/0h3uvSt.png">
 2. El bucle manda la respuesta de que no hay imagenes
 <img src="https://i.imgur.com/QiQUnHD.png">
 3.Subimos una imagen
@@ -30,4 +29,6 @@
 10. Y al intentar guardar la imagen como solo te dejaria guardar el html por ende no obtendria la imagen
 <img src="https://i.imgur.com/74Z6LjZ.png">
 
-Si le hechan ingenio pueden hacer de esto un metodo extraido en el cual les sirva p
+Si le hechan ingenio pueden hacer de esto un metodo extraido en el cual les sirva para todas las imagenes de forma automatizada.
+
+Fuente: <a href="https://www.facebook.com/groups/laravelesp/?post_id=3373660762688003">Grupo de Facebook Laravel en Español</a>
