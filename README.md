@@ -13,22 +13,21 @@
 </p>
 2. El bucle manda la respuesta de que no hay imagenes
 <img src="https://i.imgur.com/QiQUnHD.png">
-Subimos una imagen
+3.Subimos una imagen
 <img src="https://i.imgur.com/BV6uGab.png">
-3. Y se visualizan en el forelse
+4. Y se visualizan en el forelse
 <img src="https://i.imgur.com/i8l45EU.png">
-4. En la BD se guardaron con un nombre Organico 1.jpg (sabemos que esa imagen pertenece al id 1 de la categoria que determinemos):
+5. En la BD se guardaron con un nombre Organico 1.jpg (sabemos que esa imagen pertenece al id 1 de la categoria que determinemos):
 <img src="https://i.imgur.com/Y9UmzFV.png">
-5. En nuestra estructura de direcctorios tambien se crea de forma organica, cuando revisemos nuestros ficheros podemos ver que estan las imagenes sin encriptar
+6. En nuestra estructura de direcctorios tambien se crea de forma organica, cuando revisemos nuestros ficheros podemos ver que estan las imagenes sin encriptar
 <img src="https://i.imgur.com/9Znogjm.png">
-
-6. A la hora de imprimir la vista si aparecen el archivo encriptado, por ende ya no puede ser atacado por un sistema automatizado a menos que conozcan nuestra clave de HashIds
+7. A la hora de imprimir la vista si aparecen el archivo encriptado, por ende ya no puede ser atacado por un sistema automatizado a menos que conozcan nuestra clave de HashIds
 <img src="https://i.imgur.com/35DBnRu.png">
-7. Si alguien intentara acceder manualmente a la ruta se encontraria con el blob asi que no lo podria descargar
+8. Si alguien intentara acceder manualmente a la ruta se encontraria con el blob asi que no lo podria descargar
 <img src="https://i.imgur.com/bAQjjto.png">
-8. Si intentara retroceder en la vista de directorios al ser una ruta nos daria un 404
+9. Si intentara retroceder en la vista de directorios al ser una ruta nos daria un 404
 <img src="https://i.imgur.com/pbG42Kn.png">
-9. Y al intentar guardar la imagen como solo te dejaria guardar el html por ende no obtendria la imagen
+10. Y al intentar guardar la imagen como solo te dejaria guardar el html por ende no obtendria la imagen
 <img src="https://i.imgur.com/74Z6LjZ.png">
 
 Si le hechan ingenio pueden hacer de esto un metodo extraido en el cual les sirva p
